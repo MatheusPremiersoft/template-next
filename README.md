@@ -27,7 +27,7 @@ Este template inclui:
 
 ```bash
 git clone [URL_DO_REPOSITÓRIO]
-cd template-next
+cd trainer-tracker
 ```
 
 2. Instale as dependências
