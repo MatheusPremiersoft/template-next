@@ -1,5 +1,5 @@
 import { AUTH_STORAGE_KEY } from '@/shared/constants';
-import { getTokens, removeState } from '@/shared/helpers';
+import { getTokens, removeState } from '@/shared/helpers/auth';
 import { signIn } from '@/shared/services/auth';
 import { t } from 'i18next';
 import { jwtDecode } from 'jwt-decode';

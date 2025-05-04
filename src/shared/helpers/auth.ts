@@ -1,4 +1,4 @@
-import { db, session } from '@/shared/helpers';
+import { db, session } from '@/shared/helpers/database';
 import { Collection } from '@/shared/models/collection';
 import { User } from '@/shared/models/user';
 

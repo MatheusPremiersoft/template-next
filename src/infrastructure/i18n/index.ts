@@ -1,4 +1,4 @@
-import { db } from '@/shared/helpers';
+import { db } from '@/shared/helpers/database';
 import { Collection } from '@/shared/models/collection';
 import i18n from 'i18next';
 import { en, es, pt } from './locales';

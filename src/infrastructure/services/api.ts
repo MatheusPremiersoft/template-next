@@ -1,5 +1,5 @@
-// import { LogError } from '@/helpers/error';
-import { removeState } from '@/shared/helpers';
+import { removeState } from '@/shared/helpers/auth';
+import { LoggerError } from '@/shared/helpers/logger';
 import { useAuthStore } from '@/shared/stores/auth';
 import axios, { AxiosError, AxiosResponse } from 'axios';
 
@@ -59,7 +59,7 @@ export const createAxiosInstance = (path: string) => {
       return config;
     },
     (error: AxiosError) => {
-      // LogError('Error in request interceptor:', error);
+      LoggerError('Error in request interceptor:', error);
       return Promise.reject(error); // Reject the request on error
     }
   );
@@ -125,7 +125,7 @@ export const createAxiosInstance = (path: string) => {
             originalRequest.headers.Authorization = `Bearer ${newToken}`;
             return instance(originalRequest);
           } catch (refreshError: any) {
-            // LogError('Error refreshing token:', refreshError);
+            LoggerError('Error refreshing token:', refreshError);
             processQueue(refreshError, null);
 
             removeState();
